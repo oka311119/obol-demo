@@ -33,3 +33,5 @@ export { default as HeroLayout1 } from "./HeroLayout1";
 export { default as Features2x2 } from "./Features2x2";
 export { default as FeaturesText2x2 } from "./FeaturesText2x2";
 export { default as studioTheme } from "./studioTheme";
+export { default as PostCreateForm } from "./PostCreateForm";
+export { default as PostUpdateForm } from "./PostUpdateForm";
