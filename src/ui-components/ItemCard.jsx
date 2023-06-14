@@ -9,7 +9,7 @@ import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Badge, Flex, Text } from "@aws-amplify/ui-react";
 export default function ItemCard(props) {
-  const { overrides, ...rest } = props;
+  const { postProp, overrides, ...rest } = props;
   return (
     <Flex
       gap="16px"
@@ -31,7 +31,7 @@ export default function ItemCard(props) {
         shrink="0"
         size="small"
         variation="default"
-        children="New"
+        children={postProp?.rating}
         {...getOverrideProps(overrides, "Badge")}
       ></Badge>
       <Flex
@@ -77,7 +77,7 @@ export default function ItemCard(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="T-Shirt"
+            children={postProp?.title}
             {...getOverrideProps(overrides, "T-Shirt")}
           ></Text>
           <Text
@@ -99,7 +99,7 @@ export default function ItemCard(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="Classic Long Sleeve"
+            children={postProp?.content}
             {...getOverrideProps(overrides, "Classic Long Sleeve")}
           ></Text>
         </Flex>
@@ -121,7 +121,7 @@ export default function ItemCard(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="$99"
+          children="1"
           {...getOverrideProps(overrides, "$99")}
         ></Text>
       </Flex>

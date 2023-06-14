@@ -27,6 +27,7 @@ export { default as HeroLayout4 } from "./HeroLayout4";
 export { default as NavBar } from "./NavBar";
 export { default as FormCheckout } from "./FormCheckout";
 export { default as FAQItem } from "./FAQItem";
+export { default as ItemCardCollection } from "./ItemCardCollection";
 export { default as Features4x1 } from "./Features4x1";
 export { default as ProfileCard } from "./ProfileCard";
 export { default as HeroLayout1 } from "./HeroLayout1";

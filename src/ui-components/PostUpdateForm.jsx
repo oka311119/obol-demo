@@ -144,7 +144,12 @@ export default function PostUpdateForm(props) {
       {...rest}
     >
       <TextField
-        label="Title"
+        label={
+          <span style={{ display: "inline-flex" }}>
+            <span>Title</span>
+            <span style={{ color: "red" }}>*</span>
+          </span>
+        }
         isRequired={true}
         isReadOnly={false}
         value={title}
