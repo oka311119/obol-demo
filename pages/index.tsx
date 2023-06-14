@@ -7,6 +7,8 @@ import {
   SideBar,
   ContactUs,
   MarketingFooter,
+  ItemCardCollection,
+  PostCreateForm,
 } from "../src/ui-components";
 
 Amplify.configure(config);
@@ -15,15 +17,10 @@ function Home() {
   return (
     <Flex direction="column" className="min-h-screen">
       <NavBar />
-      <Flex direction="column" grow={1}>
-        <Flex grow={1}>
-          <SideBar />
-          <Flex grow={1}>
-            <ContactUs />
-          </Flex>
-        </Flex>
+      <Flex direction="row" className="flex-grow">
+        <ItemCardCollection />
+        <PostCreateForm />
       </Flex>
-      <MarketingFooter />
     </Flex>
   );
 }
