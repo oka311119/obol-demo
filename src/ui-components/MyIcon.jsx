@@ -316,6 +316,36 @@ export default function MyIcon(props) {
         },
       },
     },
+    {
+      variantValues: {},
+      overrides: {
+        MyIcon: {
+          paths: [
+            {
+              d: "M8 20L17 20C17.83 20 18.54 19.5 18.84 18.78L21.86 11.73C21.95 11.5 22 11.26 22 11L22 9C22 7.9 21.1 7 20 7L13.69 7L14.64 2.43L14.67 2.11C14.67 1.7 14.5 1.32 14.23 1.05L13.17 0L6.58 6.59C6.22 6.95 6 7.45 6 8L6 18C6 19.1 6.9 20 8 20ZM8 8L12.34 3.66L11 9L20 9L20 11L17 18L8 18L8 8ZM0 8L4 8L4 20L0 20L0 8Z",
+              fill: "rgba(0,0,0,1)",
+              fillRule: "nonzero",
+              style: { transform: "translate(4.17%, 8.33%)" },
+            },
+          ],
+        },
+      },
+    },
+    {
+      variantValues: {},
+      overrides: {
+        MyIcon: {
+          paths: [
+            {
+              d: "M14 0L5 0C4.17 0 3.46 0.5 3.16 1.22L0.14 8.27C0.05 8.5 0 8.74 0 9L0 11C0 12.1 0.9 13 2 13L8.31 13L7.36 17.57L7.33 17.89C7.33 18.3 7.5 18.68 7.77 18.95L8.83 20L15.42 13.41C15.78 13.05 16 12.55 16 12L16 2C16 0.9 15.1 0 14 0ZM14 12L9.66 16.34L11 11L2 11L2 9L5 2L14 2L14 12ZM18 0L22 0L22 12L18 12L18 0Z",
+              fill: "rgba(0,0,0,1)",
+              fillRule: "nonzero",
+              style: { transform: "translate(4.17%, 8.33%)" },
+            },
+          ],
+        },
+      },
+    },
   ];
   const overrides = mergeVariantsAndOverrides(
     getOverridesFromVariants(variants, props),
