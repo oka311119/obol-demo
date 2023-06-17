@@ -5,6 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
+import { Card } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { MyIconProps } from "./MyIcon";
 import { FlexProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
@@ -41,6 +42,8 @@ export declare type FlashCardOverridesProps = {
     MyIcons?: MyIconProps;
 } & EscapeHatchProps;
 export declare type FlashCardProps = React.PropsWithChildren<Partial<FlexProps> & {
+    card?: Card;
+} & {
     overrides?: FlashCardOverridesProps | undefined | null;
 }>;
 export default function FlashCard(props: FlashCardProps): React.ReactElement;

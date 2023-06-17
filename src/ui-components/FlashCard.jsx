@@ -10,7 +10,7 @@ import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import MyIcon from "./MyIcon";
 import { Flex, Image, Text, View } from "@aws-amplify/ui-react";
 export default function FlashCard(props) {
-  const { overrides, ...rest } = props;
+  const { card, overrides, ...rest } = props;
   return (
     <Flex
       gap="16px"
@@ -158,7 +158,7 @@ export default function FlashCard(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
-                children="Channel"
+                children={card?.level}
                 {...getOverrideProps(overrides, "Channel")}
               ></Text>
               <Text
@@ -180,7 +180,7 @@ export default function FlashCard(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
-                children="Timestamp"
+                children={card?.dueDate}
                 {...getOverrideProps(overrides, "Timestamp")}
               ></Text>
             </Flex>
@@ -268,7 +268,7 @@ export default function FlashCard(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="“Lorem ipsum dolor sit amet, consectetur adipiscing elit. ”"
+              children={card?.question}
               {...getOverrideProps(
                 overrides,
                 "\u201CLorem ipsum dolor sit amet, consectetur adipiscing elit. \u201D36553314"
@@ -329,7 +329,7 @@ export default function FlashCard(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="“Lorem ipsum dolor sit amet, consectetur adipiscing elit. ”"
+              children={card?.answer}
               {...getOverrideProps(
                 overrides,
                 "\u201CLorem ipsum dolor sit amet, consectetur adipiscing elit. \u201D36553317"
@@ -363,6 +363,7 @@ export default function FlashCard(props) {
           borderRadius="64px"
           padding="0px 0px 0px 0px"
           objectFit="cover"
+          src={card?.questionImageUrl}
           {...getOverrideProps(overrides, "image")}
         ></Image>
       </Flex>

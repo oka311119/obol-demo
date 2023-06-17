@@ -53,5 +53,4 @@ type Plan @model @auth(rules: [{allow: private}]) {
   score: Int!
   createdAt: AWSDateTime!
   cardID: ID! @index(name: "byCard")
-}
- 
+} 

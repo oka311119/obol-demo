@@ -4,11 +4,9 @@ import "@aws-amplify/ui-react/styles.css";
 import config from '../src/aws-exports';
 import {
   NavBar,
-  SideBar,
-  ContactUs,
-  MarketingFooter,
-  ItemCardCollection,
-  PostCreateForm,
+  FlashCardCollection,
+  CardForm,
+  ChannelForm,
 } from "../src/ui-components";
 
 Amplify.configure(config);
@@ -18,8 +16,9 @@ function Home() {
     <Flex direction="column" className="min-h-screen">
       <NavBar />
       <Flex direction="row" className="flex-grow">
-        <ItemCardCollection />
-        <PostCreateForm />
+        <FlashCardCollection />
+        <CardForm />
+        <ChannelForm />
       </Flex>
     </Flex>
   );
