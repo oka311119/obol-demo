@@ -6,19 +6,19 @@
 
 /* eslint-disable */
 import * as React from "react";
-import { Card } from "../models";
+import { Channel } from "../models";
 import {
   getOverrideProps,
   useDataStoreBinding,
 } from "@aws-amplify/ui-react/internal";
-import FlashCard from "./FlashCard";
+import FAQItem from "./FAQItem";
 import { Collection } from "@aws-amplify/ui-react";
-export default function FlashCardCollection(props) {
+export default function FAQItemCollection(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
   const [items, setItems] = React.useState(undefined);
   const itemsDataStore = useDataStoreBinding({
     type: "collection",
-    model: Card,
+    model: Channel,
   }).items;
   React.useEffect(() => {
     if (itemsProp !== undefined) {
@@ -29,7 +29,7 @@ export default function FlashCardCollection(props) {
       var loaded = await Promise.all(
         itemsDataStore.map(async (item) => ({
           ...item,
-          Plans: await item.Plans.toArray(),
+          Cards: await item.Cards.toArray(),
         }))
       );
       setItems(loaded);
@@ -39,20 +39,18 @@ export default function FlashCardCollection(props) {
   return (
     <Collection
       type="list"
-      searchPlaceholder="Search..."
       direction="column"
-      alignItems="stretch"
       justifyContent="left"
       items={items || []}
-      {...getOverrideProps(overrides, "FlashCardCollection")}
+      {...getOverrideProps(overrides, "FAQItemCollection")}
       {...rest}
     >
       {(item, index) => (
-        <FlashCard
-          card={item}
+        <FAQItem
+          channel={item}
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}
-        ></FlashCard>
+        ></FAQItem>
       )}
     </Collection>
   );

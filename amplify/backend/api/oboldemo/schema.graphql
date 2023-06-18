@@ -1,4 +1,4 @@
-type User @model @auth(rules: [{allow: private}]) {
+type User @model @auth(rules: [{ allow: private }]) {
   id: ID!
   email: AWSEmail!
   name: String!
@@ -9,7 +9,7 @@ type User @model @auth(rules: [{allow: private}]) {
   Channels: [Channel] @hasMany(indexName: "byUser", fields: ["id"])
 }
 
-type Channel @model @auth(rules: [{allow: private}]) {
+type Channel @model @auth(rules: [{ allow: private }]) {
   id: ID!
   name: String!
   canDelete: Boolean!
@@ -21,7 +21,7 @@ type Channel @model @auth(rules: [{allow: private}]) {
   Cards: [Card] @hasMany(indexName: "byChannel", fields: ["id"])
 }
 
-type Card @model @auth(rules: [{allow: private}]) {
+type Card @model @auth(rules: [{ allow: private }]) {
   id: ID!
   channelId: String!
   question: String!
@@ -38,7 +38,7 @@ type Card @model @auth(rules: [{allow: private}]) {
   Plans: [Plan] @hasMany(indexName: "byCard", fields: ["id"])
 }
 
-type Tag @model @auth(rules: [{allow: private}]) {
+type Tag @model @auth(rules: [{ allow: private }]) {
   id: ID!
   tagName: String!
   createdAt: AWSDateTime!
@@ -47,10 +47,10 @@ type Tag @model @auth(rules: [{allow: private}]) {
   cards: [Card] @manyToMany(relationName: "CardTag")
 }
 
-type Plan @model @auth(rules: [{allow: private}]) {
+type Plan @model @auth(rules: [{ allow: private }]) {
   id: ID!
   planDate: AWSDateTime!
   score: Int!
   createdAt: AWSDateTime!
   cardID: ID! @index(name: "byCard")
-} 
+}
