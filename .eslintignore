@@ -1,2 +1,11 @@
+src
+amplify
+node_modules
+.vscode
+.next
+amplify-build-config.json
+next-env.d.ts
+
 src/models
+
 amplify-codegen-temp/models

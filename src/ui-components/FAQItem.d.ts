@@ -5,6 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
+import { Channel } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { DividerProps, FlexProps, TextProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
@@ -17,6 +18,8 @@ export declare type FAQItemOverridesProps = {
     Divider?: PrimitiveOverrideProps<DividerProps>;
 } & EscapeHatchProps;
 export declare type FAQItemProps = React.PropsWithChildren<Partial<FlexProps> & {
+    channel?: Channel;
+} & {
     overrides?: FAQItemOverridesProps | undefined | null;
 }>;
 export default function FAQItem(props: FAQItemProps): React.ReactElement;
