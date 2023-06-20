@@ -19,6 +19,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - monorepo構成
 - monorepo管理用のworkspaceは使わない
 - amplifyのhostingをデプロイ環境として使う。Gitと連携してmasterブランチにpushされたら自動でデプロイされるようにする。
+- amplify statusコマンドでapi, auth, hostingが表示される
 
 ### メモ
 
@@ -27,3 +28,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
   - 基本的にはamplifyのhostingのGUIで操作して生成された内容を使う。
   - backendの中で`amplifyPush --simple`を実行する。これでデプロイ環境で`aws-exports.js`が生成される。backendを定義していなくても必要。
 - amplify.ymlを編集したら`amplify push`を実行する。(必要ないかも？git pushしたら更新される)
+- `next.config.js`の`reactStrictMode`をtrueにしたとき、`aws-exports.ts`を作成して、importするようにする。
