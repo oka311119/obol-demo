@@ -31,3 +31,18 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - amplify.ymlを編集したら`amplify push`を実行する。(必要ないかも？git pushしたら更新される)
 - `next.config.js`の`reactStrictMode`をtrueにしたとき、`aws-exports.ts`を作成して、importするようにする。
 
+- 基本的にはmasterブランチに対して"development"、"staging"、"production"の3つの環境を用意する。
+- 開発者が増えてきたときに、個々の開発者ごとにブランチを分けて環境を作りたいときはブランチを切って、そのブランチ専用の"development"、"staging"環境を作る
+
+- masterブランチのAWS環境
+
+- masterブランチ以外のAWS環境
+  - 方法１(非推奨)
+    - amplify.ymlをgitにpushする(機密情報のため非推奨となっている)
+  - 方法２
+    - `amplify dev add OO`で環境を追加する(dev, stg, prod)
+    - `amplify push`で環境を反映させる
+    - amplifyのhostingの設定をする（GUI）
+      - アプリケーションの名前
+      - バックエンド環境 **ここを選択しないとエラーが起こる？**[addId, type]がない
+      - フルスタックCI/CDを有効化のチェックを外す
