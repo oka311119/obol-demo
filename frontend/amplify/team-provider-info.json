@@ -1,0 +1,56 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-oboldemo-dev-95756-authRole",
+      "UnauthRoleArn": "arn:aws:iam::670418660352:role/amplify-oboldemo-dev-95756-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::670418660352:role/amplify-oboldemo-dev-95756-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-oboldemo-dev-95756-deployment",
+      "UnauthRoleName": "amplify-oboldemo-dev-95756-unauthRole",
+      "StackName": "amplify-oboldemo-dev-95756",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:670418660352:stack/amplify-oboldemo-dev-95756/ac704510-0660-11ee-82c6-0e1a2162c2eb",
+      "AmplifyAppId": "d1u116c7kwdfc1"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1u116c7kwdfc1",
+          "type": "cicd"
+        }
+      },
+      "auth": {
+        "oboldemoff7e2266": {}
+      },
+      "api": {
+        "oboldemo": {}
+      }
+    }
+  },
+  "stg": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-oboldemo-stg-191039-authRole",
+      "UnauthRoleArn": "arn:aws:iam::670418660352:role/amplify-oboldemo-stg-191039-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::670418660352:role/amplify-oboldemo-stg-191039-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-oboldemo-stg-191039-deployment",
+      "UnauthRoleName": "amplify-oboldemo-stg-191039-unauthRole",
+      "StackName": "amplify-oboldemo-stg-191039",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:670418660352:stack/amplify-oboldemo-stg-191039/e1ff7240-101b-11ee-8ecd-0a8726753de9",
+      "AmplifyAppId": "d1u116c7kwdfc1"
+    },
+    "categories": {
+      "auth": {
+        "oboldemoff7e2266": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1u116c7kwdfc1",
+          "type": "cicd"
+        }
+      },
+      "api": {
+        "oboldemo": {}
+      }
+    }
+  }
+}
