@@ -1,13 +1,13 @@
 version: 1
 applications:
   - appRoot: frontend
-    # backend:
-    #   phases:
-    #     build:
-    #       commands:
-    #         - "# Execute Amplify CLI with the helper script"
-    #         # - amplifyPush --simple
-    #         - amplify push --simple
+    backend:
+      phases:
+        build:
+          commands:
+            - "# Execute Amplify CLI with the helper script"
+            - amplifyPush --simple
+            # - amplify push --simple
     frontend:
       phases:
         preBuild:
